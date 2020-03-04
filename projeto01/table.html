@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de uma Table</title>
+</head>
+<body>
+   <form action="get">
+    Nome:<br/>
+    <input id="nome">
+    <br/>
+    Idade:<br/>
+    <input id="idade">
+
+    <br/>
+    
+    </form>
+    <button onclick="adicionarElemento()">adicionar</button>
+    
+
+    <table border="1" id="table01">
+        <tbody id="tbody">
+            <th>Nome</th>
+            <th>Idade</th>
+                <tr>
+                    <td>Marcos Sousa</td>
+                    <td>31</td>
+                </tr>
+                <tr>
+                    <td>Dielle Sousa</td>
+                    <td>30</td>
+                </tr>
+        </tbody>
+    </table>
+
+    <script>
+    function   adicionarElemento(){
+        var tr = document.createElement("tr");            
+        var td01 = document.createElement("td");
+        var td02 = document.createElement("td");
+        var tbody = document.querySelector("#tbody");
+
+            nome = document.querySelector("#nome").value;
+            idade = document.querySelector("#idade").value;
+           
+        text01 = document.createTextNode(nome);
+        text02 = document.createTextNode(idade);
+        td01.appendChild(text01);
+        td02.appendChild(text02);
+        tbody.appendChild(tr);
+        tr.appendChild(td01);
+        tr.appendChild(td02);
+        
+        
+        console.log(table01);
+
+        
+    }
+       
+
+    </script>
+</body>
+</html>
